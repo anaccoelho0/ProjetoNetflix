@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming</title>
+    <link rel="stylesheet" href="./css/streaming.css">
+</head>
+<body>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/1xkM0bS1tqI" title="Documentário Monalisa" allowfullscreen></iframe>
+    </div>
+    <div class="info">
+        <div class="doc-title">Monalisa: O Mistério da Obra-Prima</div>
+        <button class="related-btn" onclick="toggleRelated()">Vídeos Relacionados</button>
+        <div class="related-videos" id="relatedVideos">
+            <div class="related-video" onclick="changeVideo('1xkM0bS1tqI', 'Monalisa: O Mistério da Obra-Prima')">
+                <img class="related-thumb" src="https://img.youtube.com/vi/1xkM0bS1tqI/hqdefault.jpg" alt="Monalisa">
+                <span>Monalisa: O Mistério da Obra-Prima</span>
+            </div>
+            <div class="related-video" onclick="changeVideo('Q5w3J6QG5yE', 'A História da Monalisa')">
+                <img class="related-thumb" src="https://img.youtube.com/vi/Q5w3J6QG5yE/hqdefault.jpg" alt="História da Monalisa">
+                <span>A História da Monalisa</span>
+            </div>
+            <div class="related-video" onclick="changeVideo('wQhF6r1Q2gA', 'Segredos da Monalisa Revelados')">
+                <img class="related-thumb" src="https://img.youtube.com/vi/wQhF6r1Q2gA/hqdefault.jpg" alt="Segredos da Monalisa">
+                <span>Segredos da Monalisa Revelados</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleRelated() {
+            const related = document.getElementById('relatedVideos');
+            related.style.display = related.style.display === 'flex' ? 'none' : 'flex';
+        }
+        function changeVideo(videoId, title) {
+            const iframe = document.querySelector('.video-container iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            document.querySelector('.doc-title').textContent = title;
+            document.getElementById('relatedVideos').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

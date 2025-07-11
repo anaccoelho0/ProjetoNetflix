@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .video-container {
+            width: 90vw;
+            height: 90vh;
+            max-width: 1600px;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.7);
+            margin-top: 2vh;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+        .info {
+            width: 90vw;
+            max-width: 1600px;
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .doc-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .related-btn {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 12px;
+            transition: background 0.2s;
+        }
+        .related-btn:hover {
+            background: #b00610;
+        }
+        .related-videos {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            background: #181818;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 8px;
+        }
+        .related-video {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .related-video:hover {
+            background: #222;
+        }
+        .related-thumb {
+            width: 80px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        @media (max-width: 900px) {
+            .video-container, .info {
+                width: 100vw;
+                max-width: 100vw;
+            }
+            .video-container {
+                height: 40vh;
+                max-height: 50vw;
+            }
+        }
