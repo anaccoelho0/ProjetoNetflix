@@ -192,3 +192,12 @@ h1, h2, h3 {
     background-color: #1a1a1a;
     color: #d4af37;
 }
+
+.lista-obras {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Cards mais compactos */
+}
+
+.obra-card img {
+    height: 200px; /* Altura ligeiramente reduzida */
+    object-position: top; /* Enquadra melhor rostos em retratos */
+}
