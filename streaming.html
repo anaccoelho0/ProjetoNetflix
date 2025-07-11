@@ -19,11 +19,10 @@
         
     </div>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/1xkM0bS1tqI" title="Documentário Monalisa" allowfullscreen></iframe>
+        <iframe width="914" height="514" src="https://www.youtube.com/embed/hkm9zod2ixc" title="Segredos sombrios da Mona Lisa que você nunca vai parar de comentar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="info">
-        <div class="doc-title">Monalisa: O Mistério da Obra-Prima</div>
-        <button class="related-btn" onclick="toggleRelated()">Vídeos Relacionados</button>
+        <h2 class="related-title">Vídeos Relacionados</h2>
         <div class="related-videos" id="relatedVideos">
             <div class="related-video" onclick="changeVideo('1xkM0bS1tqI', 'Monalisa: O Mistério da Obra-Prima')">
                 <img class="related-thumb" src="https://img.youtube.com/vi/1xkM0bS1tqI/hqdefault.jpg" alt="Monalisa">
@@ -40,15 +39,10 @@
         </div>
     </div>
     <script>
-        function toggleRelated() {
-            const related = document.getElementById('relatedVideos');
-            related.style.display = related.style.display === 'flex' ? 'none' : 'flex';
-        }
         function changeVideo(videoId, title) {
             const iframe = document.querySelector('.video-container iframe');
             iframe.src = `https://www.youtube.com/embed/${videoId}`;
             document.querySelector('.doc-title').textContent = title;
-            document.getElementById('relatedVideos').style.display = 'none';
         }
     </script>
 </body>
