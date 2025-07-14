@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Streaming</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="./css/streaming.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./css/streaming.css" />
+  </head>
+  <body>
     <div class="header">
+      <div class="header-buttons">
+        <button
+          class="home-btn"
+          onclick="window.location.href='index.html'"
+          title="Início"
+        >
+          <img
+            src="./assets/img/flixarte1.png"
+            alt="Início"
+            style="height: 24px"
+          />
+        </button>
         <button class="back-btn" onclick="history.back()" title="Voltar">
-            &#8592;
+          &#8592;
         </button>
-        <button class="home-btn" onclick="window.location.href='index.html'" title="Início">
-            &#8962;
-        </button>
-        <div class="doc-title">Segredos sombrios da Mona Lisa</div>
-        
+      </div>
+      <h1 class="doc-title">Segredos sombrios da Mona Lisa</h1>
     </div>
     <div class="video-container">
-        <iframe width="914" height="514" src="https://www.youtube.com/embed/hkm9zod2ixc" title="Segredos sombrios da Mona Lisa que você nunca vai parar de comentar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe
+        width="914"
+        height="514"
+        src="https://www.youtube.com/embed/hkm9zod2ixc"
+        title="Segredos sombrios da Mona Lisa que você nunca vai parar de comentar"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="info">
-        <h2 class="related-title">Vídeos Relacionados</h2>
-        <div class="related-videos" id="relatedVideos">
-            <div class="related-video" onclick="changeVideo('1xkM0bS1tqI', 'Monalisa: O Mistério da Obra-Prima')">
-                <img class="related-thumb" src="https://img.youtube.com/vi/1xkM0bS1tqI/hqdefault.jpg" alt="Monalisa">
-                <span>Monalisa: O Mistério da Obra-Prima</span>
-            </div>
-            <div class="related-video" onclick="changeVideo('Q5w3J6QG5yE', 'A História da Monalisa')">
-                <img class="related-thumb" src="https://img.youtube.com/vi/Q5w3J6QG5yE/hqdefault.jpg" alt="História da Monalisa">
-                <span>A História da Monalisa</span>
-            </div>
-            <div class="related-video" onclick="changeVideo('wQhF6r1Q2gA', 'Segredos da Monalisa Revelados')">
-                <img class="related-thumb" src="https://img.youtube.com/vi/wQhF6r1Q2gA/hqdefault.jpg" alt="Segredos da Monalisa">
-                <span>Segredos da Monalisa Revelados</span>
-            </div>
+      <h2 class="related-title">Vídeos Relacionados</h2>
+      <div class="related-videos" id="relatedVideos">
+        <div
+          class="related-video"
+          onclick="changeVideo('1xkM0bS1tqI', 'Monalisa: O Mistério da Obra-Prima')"
+        >
+          <img
+            class="related-thumb"
+            src="https://img.youtube.com/vi/1xkM0bS1tqI/hqdefault.jpg"
+            alt="Monalisa"
+          />
+          <span>Monalisa: O Mistério da Obra-Prima</span>
         </div>
+        <div
+          class="related-video"
+          onclick="changeVideo('Q5w3J6QG5yE', 'A História da Monalisa')"
+        >
+          <img
+            class="related-thumb"
+            src="https://img.youtube.com/vi/Q5w3J6QG5yE/hqdefault.jpg"
+            alt="História da Monalisa"
+          />
+          <span>A História da Monalisa</span>
+        </div>
+        <div
+          class="related-video"
+          onclick="changeVideo('wQhF6r1Q2gA', 'Segredos da Monalisa Revelados')"
+        >
+          <img
+            class="related-thumb"
+            src="https://img.youtube.com/vi/wQhF6r1Q2gA/hqdefault.jpg"
+            alt="Segredos da Monalisa"
+          />
+          <span>Segredos da Monalisa Revelados</span>
+        </div>
+      </div>
     </div>
     <script>
-        function changeVideo(videoId, title) {
-            const iframe = document.querySelector('.video-container iframe');
-            iframe.src = `https://www.youtube.com/embed/${videoId}`;
-            document.querySelector('.doc-title').textContent = title;
-        }
+      function changeVideo(videoId, title) {
+        const iframe = document.querySelector(".video-container iframe");
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        document.querySelector(".doc-title").textContent = title;
+      }
     </script>
-</body>
+  </body>
 </html>

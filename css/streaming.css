@@ -17,6 +17,8 @@ body {
 }
 
 .header {
+  z-index: 0;
+  position: relative;
   width: 100vw;
   max-width: 100vw;
   display: flex;
@@ -28,11 +30,17 @@ body {
   border-bottom: 2px solid #d4af37;
   margin-bottom: 18px;
 }
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .back-btn,
 .home-btn {
-  background: #d4af37;
-  color: #181818;
-  border: none;
+  background: none;
+  color: #d4af37;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -42,14 +50,13 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 0 8px;
+  transition: transform 0.15s;
 }
+
 .back-btn:hover,
 .home-btn:hover {
-  background: #fff;
-  color: #d4af37;
+  transform: scale(1.15);
 }
 .header .doc-title {
   flex: 1;
