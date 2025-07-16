@@ -4,250 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlixArte - Streaming de Arte e Cultura</title>
+    <title>TupiFlix | Lendas Brasileiras</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header com tema de museu -->
+    <!-- Header Animado -->
     <header class="header">
         <div class="logo-container">
-            <img src="assets/img/FlixArt.png" alt="FlixArte Logo" class="logo">
-            <span class="slogan">Onde a arte ganha vida</span>
+            <div class="logo">
+                <span class="tupi">TUPI</span>
+                <div class="flix">
+                    <i class="fas fa-play"></i>
+                    <span>FLIX</span>
+                </div>
+            </div>
+            <span class="slogan">Lendas que ganham vida</span>
         </div>
-        <nav>
-            <button class="btn-explorar">Explorar Galerias</button>
+
+        <nav class="nav">
+            <button class="btn-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Lendas</a></li>
+                <li><a href="#">Documentários</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <button class="btn-login">
+                <i class="fas fa-user"></i>
+                Entrar
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section (Destaque do documentário) -->
-    <section class="hero" style="background-image: url('assets/img/bennermonalisa.png');">
+    <!-- Hero Section Interativa -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="assets/videos/saci-hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
         <div class="hero-content">
-            <h1>Os Segredos da Mona Lisa</h1>
-            <p>Um documentário exclusivo sobre a obra-prima de Da Vinci.</p>
-            <button class="btn-assistir">Assistir Agora</button>
-        </div>
-    </section>
-
-    <!-- Categorias (Carrossel customizado) -->
-    <section class="categorias">
-        <h2>Explore por Movimento Artístico</h2>
-        <div class="carrossel-categorias">
-            <div class="categoria-card" style="background-image: url('assets/img/arterenascentista2.png');">
-                <div class="overlay">
-                    <h3>Arte Renascentista</h3>
-                </div>
+            <div class="hero-tags">
+                <span class="tag">NOVO</span>
+                <span class="tag">EXCLUSIVO</span>
             </div>
-            <div class="categoria-card" style="background-image: url('assets/img/modernidesign1.png');">
-                <div class="overlay">
-                    <h3>Design Moderno</h3>
-                </div>
-            </div>
-            <!-- Adicione mais categorias -->
-
-            <div class="categoria-card" style="background-image: url('assets/img/barroco.png');">
-                <div class="overlay">
-                    <h3>Barroco</h3>
-                </div>
-            </div>
-            <div class="categoria-card" style="background-image: url('assets/img/romantismo.png');">
-                <div class="overlay">
-                    <h3>Romantismo</h3>
-                </div>
-            </div>
-            <div class="categoria-card" style="background-image: url('assets/img/impressionismo.png');">
-                <div class="overlay">
-                    <h3>Impressionismo</h3>
-                </div>
-            </div>
-            <div class="categoria-card" style="background-image: url('assets/img/surrealismo.png');">
-                <div class="overlay">
-                    <h3>Surrealismo</h3>
-                </div>
-            </div>
-            <div class="categoria-card" style="background-image: url('assets/img/artecontemporaneo.png');">
-                <div class="overlay">
-                    <h3>Arte Contemporânea</h3>
-                </div>
-            </div>
-            <div class="categoria-card" style="background-image: url('assets/img/arteafricana.png');">
-                <div class="overlay">
-                    <h3>Arte Africana</h3>
-                </div>
+            <h1>SACI-PERERÊ</h1>
+            <p class="hero-desc">A lenda do travesso de uma perna só que conquistou o Brasil</p>
+            <div class="hero-buttons">
+                <button class="btn-play">
+                    <i class="fas fa-play"></i> Assistir
+                </button>
+                <button class="btn-info">
+                    <i class="fas fa-info-circle"></i> Mais informações
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Destaques (Obras famosas como "filmes") -->
-    <section class="destaques">
-        <h2>Obras em Destaque</h2>
-        <div class="lista-obras">
-            <div class="obra-card">
-                <img src="assets/img/noiteestrelada.png" alt="Noite Estrelada - Van Gogh">
-                <div class="obra-info">
-                    <h3>Noite Estrelada</h3>
-                    <p>Van Gogh | Pós-Impressionismo</p>
+    <!-- Carrossel de Lendas -->
+    <section class="carousel">
+        <h2 class="section-title">
+            <span class="icon"><i class="fas fa-fire"></i></span>
+            Lendas em Destaque
+        </h2>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/images/cuca.jpg')">
+                    <div class="lenda-overlay">
+                        <h3>A CUCA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="obra-card">
-                <img src="assets/img/guernica.png" alt="Guernica - Picasso">
-                <div class="obra-info">
-                    <h3>Guernica</h3>
-                    <p>Picasso | Cubismo</p>
-                </div>
-            </div>
-            <!-- Adicione mais obras -->
-            <div class="obra-card">
-                <img src="assets/img/ogrito.png" alt="O Grito - Munch">
-                <div class="obra-info">
-                    <h3>O Grito</h3>
-                    <p>Edvard Munch | Expressionismo</p>
-                </div>
-            </div>
-            <div class="obra-card">
-                <img src="assets/img/meninas.png" alt="As Meninas - Velázquez">
-                <div class="obra-info">
-                    <h3>As Meninas</h3>
-                    <p>Diego Velázquez | Barroco</p>
-                </div>
-            </div>
-            <div class="obra-card">
-                <img src="assets/img/nascimentovenus.png" alt="O Nascimento de Vênus - Botticelli">
-                <div class="obra-info">
-                    <h3>O Nascimento de Vênus</h3>
-                    <p>Botticelli | Renascimento</p>
-                </div>
-            </div>
-            <div class="obra-card">
-                <img src="assets/img/persistenciamemoria.png" alt="A Persistência da Memória - Dalí">
-                <div class="obra-info">
-                    <h3>A Persistência da Memória</h3>
-                    <p>Salvador Dalí | Surrealismo</p>
-                </div>
-            </div>
-            <div class="obra-card">
-                <img src="assets/img/balcao.png" alt="O Balcão - Manet">
-                <div class="obra-info">
-                    <h3>O Balcão</h3>
-                    <p>Édouard Manet | Impressionismo</p>
-                </div>
-            </div>
-            <div class="obra-card">
-                <img src="assets/img/africanqueen.png" alt="African Queen - Basquiat">
-                <div class="obra-info">
-                    <h3>African Queen</h3>
-                    <p>Jean-Michel Basquiat | Arte Contemporânea</p>
-                </div>
-            </div>
-            <!-- Obras Europeias Clássicas -->
-            <div class="obra-card">
-                <img src="assets/img/libertade.png" alt="A Liberdade Guiando o Povo - Delacroix">
-                <div class="obra-info">
-                    <h3>A Liberdade Guiando o Povo</h3>
-                    <p>Eugène Delacroix | Romantismo</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/vespasiano.png" alt="A Escola de Atenas - Rafael">
-                <div class="obra-info">
-                    <h3>A Escola de Atenas</h3>
-                    <p>Rafael Sanzio | Renascimento</p>
-                </div>
-            </div>
-
-            <!-- Arte Moderna -->
-            <div class="obra-card">
-                <img src="assets/img/banhistas.png" alt="As Banhistas - Cézanne">
-                <div class="obra-info">
-                    <h3>As Banhistas</h3>
-                    <p>Paul Cézanne | Pós-Impressionismo</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/broadway.png" alt="Broadway Boogie Woogie - Mondrian">
-                <div class="obra-info">
-                    <h3>Broadway Boogie Woogie</h3>
-                    <p>Piet Mondrian | Neoplasticismo</p>
-                </div>
-            </div>
-
-            <!-- Arte Latino-Americana -->
-            <div class="obra-card">
-                <img src="assets/img/abaporu.png" alt="Abaporu - Tarsila">
-                <div class="obra-info">
-                    <h3>Abaporu</h3>
-                    <p>Tarsila do Amaral | Modernismo Brasileiro</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/heroinas.png" alt="Las Heroínas - Pedro Figari">
-                <div class="obra-info">
-                    <h3>Las Heroínas</h3>
-                    <p>Pedro Figari | Costumbrismo</p>
-                </div>
-            </div>
-
-            <!-- Arte Asiática -->
-            <div class="obra-card">
-                <img src="assets/img/ondas.png" alt="A Grande Onda - Hokusai">
-                <div class="obra-info">
-                    <h3>A Grande Onda</h3>
-                    <p>Katsushika Hokusai | Ukiyo-e</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/jardim.png" alt="Jardim das Delícias - Sesshū">
-                <div class="obra-info">
-                    <h3>Jardim das Delícias</h3>
-                    <p>Sesshū Tōyō | Pintura a Tinta</p>
-                </div>
-            </div>
-
-            <!-- Arte Contemporânea Global -->
-            <div class="obra-card">
-                <img src="assets/img/menina.png" alt="Menina com Balão - Banksy">
-                <div class="obra-info">
-                    <h3>Menina com Balão</h3>
-                    <p>Banksy | Street Art</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/infinity.png" alt="Infinity Mirrors - Yayoi Kusama">
-                <div class="obra-info">
-                    <h3>Infinity Mirrors</h3>
-                    <p>Yayoi Kusama | Instalação</p>
-                </div>
-            </div>
-
-            <!-- Arte Digital -->
-            <div class="obra-card">
-                <img src="assets/img/everydays.png" alt="Everydays - Beeple">
-                <div class="obra-info">
-                    <h3>Everydays</h3>
-                    <p>Beeple | Arte Digital</p>
-                </div>
-            </div>
-
-            <div class="obra-card">
-                <img src="assets/img/memories.png" alt="Memories of Passersby - Mario Klingemann">
-                <div class="obra-info">
-                    <h3>Memories of Passersby</h3>
-                    <p>Mario Klingemann | IA Generativa</p>
-                </div>
-            </div>
-
+            <!-- Mais itens do carrossel -->
+        </div>
     </section>
 
-    <!-- Footer temático -->
+    <!-- Seção de Documentários -->
+    <section class="docs">
+        <div class="docs-header">
+            <h2 class="section-title">
+                <span class="icon"><i class="fas fa-book-open"></i></span>
+                Documentários
+            </h2>
+            <a href="#" class="see-all">Ver todos <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/images/doc-curupira.jpg" alt="Curupira">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>O Guardião das Florestas</h3>
+                    <p>45 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Mais documentários -->
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>FlixArte © 2024 - Um tributo à criatividade humana</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="tupi">TUPI</span>
+                    <div class="flix">
+                        <i class="fas fa-play"></i>
+                        <span>FLIX</span>
+                    </div>
+                </div>
+                <p>© 2024 TupiFlix - Todos os direitos reservados</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Lendas</a></li>
+                        <li><a href="#">Documentários</a></li>
+                        <li><a href="#">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
