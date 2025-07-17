@@ -120,6 +120,22 @@
                 </div>
             </div>
             <!-- Mais documentários -->
+    
+    <!-- Destaques (Obras famosas como "filmes") -->
+    <section class="destaques">
+        <h2 class="destaques-titulo">Obras em Destaque</h2>
+        
+        <!-- This div will show a warning if the API key is missing -->
+        <div id="api-key-warning">
+            <strong>Atenção:</strong> A chave da API do YouTube não foi configurada. Por favor, edite o arquivo HTML e insira sua chave para carregar os vídeos. <a href="https://developers.google.com/youtube/v3/getting-started" target="_blank">Como obter uma chave?</a>
+        </div>
+        
+        <!-- This div will show an error if the API call fails -->
+        <div id="api-error-message"></div>
+
+        <!-- This container will be populated with videos by the script -->
+        <div class="videos-container" id="youtube-videos">
+            <!-- Loading indicator can be placed here -->
         </div>
     </section>
 
@@ -159,6 +175,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
