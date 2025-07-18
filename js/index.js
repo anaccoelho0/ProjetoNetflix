@@ -1,11 +1,11 @@
 import { fetchYouTubeVideos, getCategory, getCategoryIcon } from './api_request.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const destaquesSection = document.querySelector('section.destaques');
-    if (!destaquesSection) return;
+    const docsGrid = document.querySelector('.docs-grid');
+    if (!docsGrid) return;
     try {
         const videos = await fetchYouTubeVideos('folclore mitologia brasil');
-        destaquesSection.innerHTML = '';
+        docsGrid.innerHTML = '';
         videos.forEach(item => {
             const videoId = item.id.videoId;
             const title = item.snippet.title;
@@ -14,27 +14,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             const publishedAt = new Date(item.snippet.publishedAt).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
             const category = getCategory(title);
             const categoryIconSvg = getCategoryIcon(category);
+            // Duração não está disponível diretamente na resposta da search API, então exibiremos 'YouTube' como placeholder
+            const duration = 'YouTube';
             const cardHTML = `
-                <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=${videoId}', '_blank')" title="${title}">
-                    <div class="thumbnail-container">
-                        <img src="${thumbnailUrl}" alt="${title}" class="video-thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/480x270/181818/FFF?text=Vídeo+Indisponível';">
-                    </div>
-                    <div class="video-info">
-                        <div class="category-icon" title="Categoria: ${category}">
+                <div class="doc-card" onclick="window.open('https://www.youtube.com/watch?v=${videoId}', '_blank')" title="${title}">
+                    <div class="doc-thumbnail">
+                        <img src="${thumbnailUrl}" alt="${title}">
+                        <div class="doc-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="doc-category" title="Categoria: ${category}">
                             ${categoryIconSvg}
                         </div>
-                        <div class="video-meta">
-                            <h3 class="video-title">${title}</h3>
-                            <p class="video-channel">${channelTitle}</p>
-                            <p class="video-stats">Publicado em ${publishedAt}</p>
+                    </div>
+                    <div class="doc-info">
+                        <h3>${title}</h3>
+                        <p>${duration} | ${channelTitle}</p>
+                        <div class="doc-rating">
+                            <span style="font-size:0.9em;color:#d4af37;">${publishedAt}</span>
                         </div>
                     </div>
                 </div>
             `;
-            destaquesSection.innerHTML += cardHTML;
+            docsGrid.innerHTML += cardHTML;
         });
     } catch (error) {
-        destaquesSection.innerHTML = `<p style="color:#d4af37;">Erro ao carregar vídeos: ${error.message}</p>`;
+        docsGrid.innerHTML = `<p style="color:#d4af37;">Erro ao carregar vídeos: ${error.message}</p>`;
     }
 });
 
