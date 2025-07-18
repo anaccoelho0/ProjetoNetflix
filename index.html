@@ -77,24 +77,24 @@
             Destaques
         </h2>
         <div class="carousel-container">
-            <div class="carousel-item">
+            <div class="carousel-item" data-categoria="lendas urbanas folclore brasil">
                 <div class="lenda-card" style="background-image: url('assets/img/cucaa.png')">
                     <div class="lenda-overlay">
                         <h3>LENDAS URBANAS</h3>
                         <div class="lenda-actions">
-                            <button><i class="fas fa-play"></i></button>
+                            <button class="btn-relacionados"><i class="fas fa-play"></i></button>
                             <button><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Novo item - Curupira -->
-            <div class="carousel-item">
+            <div class="carousel-item" data-categoria="deuses mitologia brasileira">
                 <div class="lenda-card" style="background-image: url('assets/img/curupira.png')">
                     <div class="lenda-overlay">
                         <h3>DEUSES</h3>
                         <div class="lenda-actions">
-                            <button><i class="fas fa-play"></i></button>
+                            <button class="btn-relacionados"><i class="fas fa-play"></i></button>
                             <button><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -102,12 +102,12 @@
             </div>
 
             <!-- Novo item - Iara -->
-            <div class="carousel-item">
+            <div class="carousel-item" data-categoria="mitologia Saci Pererê">
                 <div class="lenda-card" style="background-image: url('assets/img/saci.png')">
                     <div class="lenda-overlay">
                         <h3>SACI-PERERÊ</h3>
                         <div class="lenda-actions">
-                            <button><i class="fas fa-play"></i></button>
+                            <button class="btn-relacionados"><i class="fas fa-play"></i></button>
                             <button><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -115,12 +115,12 @@
             </div>
 
             <!-- Novo item - Boitatá -->
-            <div class="carousel-item">
+            <div class="carousel-item" data-categoria="mitologia Curupira">
                 <div class="lenda-card" style="background-image: url('assets/img/curupira.png')">
                     <div class="lenda-overlay">
                         <h3>CURUPIRA</h3>
                         <div class="lenda-actions">
-                            <button><i class="fas fa-play"></i></button>
+                            <button class="btn-relacionados"><i class="fas fa-play"></i></button>
                             <button><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -128,12 +128,12 @@
             </div>
 
             <!-- Novo item - Boto Cor-de-Rosa -->
-            <div class="carousel-item">
+            <div class="carousel-item" data-categoria="mitologia iara ">
                 <div class="lenda-card" style="background-image: url('assets/img/iara.png')">
                     <div class="lenda-overlay">
                         <h3>IARA</h3>
                         <div class="lenda-actions">
-                            <button><i class="fas fa-play"></i></button>
+                            <button class="btn-relacionados"><i class="fas fa-play"></i></button>
                             <button><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
@@ -195,7 +195,22 @@
     </footer>
     
     <!-- JAVASCRIPT REQUEST API YOUTUBE - não utilizar até mesclagem da branch api_yt -->
-     <script src="./js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script>
+    // Torna os botões do carrossel abrirem relacionados.html com a categoria correta
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.carousel-item').forEach(function(item) {
+            const categoria = item.getAttribute('data-categoria');
+            const btn = item.querySelector('.btn-relacionados');
+            if (btn && categoria) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    window.location.href = `html/relacionados.html?categoria=${encodeURIComponent(categoria)}`;
+                });
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>

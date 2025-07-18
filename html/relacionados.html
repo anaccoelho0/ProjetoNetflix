@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos Relacionados</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <span class="tupi">TUPI</span>
+                <div class="flix">
+                    <i class="fas fa-play"></i>
+                    <span>FLIX</span>
+                </div>
+            </div>
+            <span class="slogan">Lendas que ganham vida</span>
+        </div>
+        <nav class="nav">
+            <a href="../index.html" class="btn-menu"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="related-videos-section">
+            <h2 id="category-title">Vídeos Relacionados</h2>
+            <div class="docs-grid" id="related-videos-grid"></div>
+        </section>
+    </main>
+    <script type="module">
+        import { fetchYouTubeVideos, getCategory, getCategoryIcon } from '../js/api_request.js';
+        // Obtém a categoria da query string (?categoria=...)
+        function getCategoriaFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('categoria') || '';
+        }
+        async function renderRelatedVideos() {
+            const categoria = getCategoriaFromURL();
+            document.getElementById('category-title').textContent = `Vídeos Relacionados: ${categoria}`;
+            const grid = document.getElementById('related-videos-grid');
+            grid.innerHTML = '';
+            try {
+                const videos = await fetchYouTubeVideos(categoria,{ maxResults: 12, order:'relevance'});
+                videos.forEach(item => {
+                    const videoId = item.id.videoId;
+                    const title = item.snippet.title;
+                    const channelTitle = item.snippet.channelTitle;
+                    const thumbnailUrl = item.snippet.thumbnails.high.url;
+                    const publishedAt = new Date(item.snippet.publishedAt).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
+                    const category = getCategory(title);
+                    const categoryIconSvg = getCategoryIcon(category);
+                    const duration = 'YouTube';
+                    const cardHTML = `
+                        <div class="doc-card" onclick="window.open('https://www.youtube.com/watch?v=${videoId}', '_blank')" title="${title}">
+                            <div class="doc-thumbnail">
+                                <img src="${thumbnailUrl}" alt="${title}">
+                                <div class="doc-play">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="doc-category" title="Categoria: ${category}">
+                                    ${categoryIconSvg}
+                                </div>
+                            </div>
+                            <div class="doc-info">
+                                <h3>${title}</h3>
+                                <p>${duration} | ${channelTitle}</p>
+                                <div class="doc-rating">
+                                    <span style="font-size:0.9em;color:#d4af37;">${publishedAt}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += cardHTML;
+                });
+            } catch (error) {
+                grid.innerHTML = `<p style='color:#d4af37;'>Erro ao carregar vídeos: ${error.message}</p>`;
+            }
+        }
+        renderRelatedVideos();
+    </script>
+</body>
+</html>
