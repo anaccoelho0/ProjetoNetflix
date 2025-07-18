@@ -30,10 +30,10 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Lendas</a></li>
-                <li><a href="#">Documentários</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="#carousel">Lendas</a></li>
+                <li><a href="#docs">Documentários</a></li>
+                <li><a href="#about">Sobre</a></li>
             </ul>
             <button class="btn-login">
                 <i class="fas fa-user"></i>
@@ -41,6 +41,7 @@
             </button>
         </nav>
     </header>
+
 
     <!-- Hero Section Interativa -->
     <section class="hero">
@@ -59,9 +60,9 @@
             <h1>SACI-PERERÊ</h1>
             <p class="hero-desc">A lenda do travesso de uma perna só que conquistou o Brasil</p>
             <div class="hero-buttons">
-                <button class="btn-play">
+                <a href="botaoassistir1.html" class="btn-play">
                     <i class="fas fa-play"></i> Assistir
-                </button>
+                </a>
                 <button class="btn-info">
                     <i class="fas fa-info-circle"></i> Mais informações
                 </button>
@@ -87,7 +88,96 @@
                     </div>
                 </div>
             </div>
-            <!-- Mais itens do carrossel -->
+            <!-- Novo item - Curupira -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/curupira.png')">
+                    <div class="lenda-overlay">
+                        <h3>O CURUPIRA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Iara -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/iara.png')">
+                    <div class="lenda-overlay">
+                        <h3>IARA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Boitatá -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/boitata.png')">
+                    <div class="lenda-overlay">
+                        <h3>BOITATÁ</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Boto Cor-de-Rosa -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/boto.png')">
+                    <div class="lenda-overlay">
+                        <h3>BOTO COR-DE-ROSA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Mula sem Cabeça -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/mulasemcabeca.png')">
+                    <div class="lenda-overlay">
+                        <h3>MULA SEM CABEÇA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Vitória-Régia -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/vitoriaregia.png')">
+                    <div class="lenda-overlay">
+                        <h3>VITÓRIA-REGIA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo item - Lobisomem -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/lobisomen.png')">
+                    <div class="lenda-overlay">
+                        <h3>LOBISOMEM</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,9 +209,134 @@
                     </div>
                 </div>
             </div>
-            <!-- Mais documentários -->
+            <!-- Documentário 2 - Iara -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/sereiaaa.jpg" alt="Canto da Sereia">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>Canto da Sereia</h3>
+                    <p>52 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 3 - Saci -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/travesso.png" alt="O Travesso Brasileiro">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>O Travesso Brasileiro</h3>
+                    <p>38 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 4 - Folclore Nacional -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/lenda.png" alt="Lendas do Brasil">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>Lendas do Brasil</h3>
+                    <p>1h 20min | Série</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 5 - Boto -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/botocorderosa.png" alt="O Sedutor dos Rios">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>O Sedutor dos Rios</h3>
+                    <p>42 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 6 - Boitatá -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/serpente.png" alt="A Serpente de Fogo">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>A Serpente de Fogo</h3>
+                    <p>49 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 7 - Mula sem Cabeça -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/mula.jpg" alt="A Maldição da Mula">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>A Maldição da Mula</h3>
+                    <p>55 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentário 8 - Lobisomem -->
+            <div class="doc-card">
+                <div class="doc-thumbnail">
+                    <img src="assets/img/lobisomenn.jpg" alt="A Transformação">
+                    <div class="doc-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="doc-info">
+                    <h3>A Transformação</h3>
+                    <p>47 min | Documentário</p>
+                    <div class="doc-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">

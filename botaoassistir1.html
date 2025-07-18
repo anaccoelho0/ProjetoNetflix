@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Saci-Pererê | TupiFlix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <span class="tupi">TUPI</span>
+                <div class="flix">
+                    <i class="fas fa-play"></i>
+                    <span>FLIX</span>
+                </div>
+            </div>
+            <span class="slogan">Lendas que ganham vida</span>
+        </div>
+
+        <nav class="nav">
+            <button class="btn-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Lendas</a></li>
+                <li><a href="#">Documentários</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <button class="btn-login">
+                <i class="fas fa-user"></i>
+                Entrar
+            </button>
+        </nav>
+    </header>
+
+    <!-- Player de Vídeo -->
+    <section class="video-player">
+        <div class="video-container">
+            <video id="main-video" controls autoplay>
+                <source src="assets/video/saci.video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <div class="video-controls">
+                <div class="left-controls">
+                    <button id="play-pause" class="control-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="time">
+                        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="right-controls">
+                    <button class="control-btn" id="fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn" id="volume-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                </div>
+                <div class="progress-container">
+                    <progress id="progress" value="0" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-info">
+            <h1>SACI-PERERÊ</h1>
+            <div class="meta-info">
+                <span class="match">97% de compatibilidade</span>
+                <span class="year">2023</span>
+                <span class="duration">38 min</span>
+                <span class="quality">HD</span>
+            </div>
+            <p class="video-desc">A lenda do travesso de uma perna só que conquistou o Brasil. Conheça as histórias,
+                origens e variações regionais deste ícone do folclore brasileiro.</p>
+
+            <div class="actions">
+                <button class="btn-action">
+                    <i class="fas fa-plus"></i> Minha Lista
+                </button>
+                <button class="btn-action">
+                    <i class="fas fa-thumbs-up"></i> Avaliar
+                </button>
+                <button class="btn-action">
+                    <i class="fas fa-share"></i> Compartilhar
+                </button>
+            </div>
+
+            <div class="details">
+                <p><strong>Elenco:</strong> Vozes: Marco Aurélio Campos, Letícia Spiller, Selton Mello</p>
+                <p><strong>Gêneros:</strong> Lendas Brasileiras, Folclore, Animação</p>
+                <p><strong>Classificação:</strong> Livre para todos os públicos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mais como este -->
+    <section class="similar">
+        <h2 class="section-title">
+            <span class="icon"><i class="fas fa-fire"></i></span>
+            Mais como este
+        </h2>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/cucaa.png')">
+                    <div class="lenda-overlay">
+                        <h3>A CUCA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/curupira.png')">
+                    <div class="lenda-overlay">
+                        <h3>O CURUPIRA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/iara.png')">
+                    <div class="lenda-overlay">
+                        <h3>IARA</h3>
+                        <div class="lenda-actions">
+                            <button><i class="fas fa-play"></i></button>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="tupi">TUPI</span>
+                    <div class="flix">
+                        <i class="fas fa-play"></i>
+                        <span>FLIX</span>
+                    </div>
+                </div>
+                <p>© 2024 TupiFlix - Todos os direitos reservados</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#">Lendas</a></li>
+                        <li><a href="#">Documentários</a></li>
+                        <li><a href="#">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="player.js"></script>
+</body>
+
+</html>
