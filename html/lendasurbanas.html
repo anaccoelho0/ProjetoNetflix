@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendas Urbanas | TupiFlix</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para esta página */
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: var(--preto);
+        }
+        
+        .legend-item {
+            background: var(--cinza-escuro);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .legend-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .legend-poster {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .legend-info {
+            padding: 1.5rem;
+            background: var(--preto);
+            color: var(--branco);
+        }
+        
+        .page-header {
+            padding: 6rem 3rem 2rem;
+            background: linear-gradient(to right, #1A1A1A, #E74C3C);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="../index.html" class="logo-link">
+                <div class="logo">
+                    <span class="tupi">TUPI</span>
+                    <div class="flix">
+                        <i class="fas fa-play"></i>
+                        <span>FLIX</span>
+                    </div>
+                </div>
+            </a>
+            <span class="slogan">Lendas que ganham vida</span>
+        </div>
+
+        <nav class="nav">
+            <button class="btn-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../index.html#carousel">Lendas</a></li>
+                <li><a href="../index.html#docs">Documentários</a></li>
+                <li><a href="../index.html#about">Sobre</a></li>
+            </ul>
+            <button class="btn-login">
+                <i class="fas fa-user"></i>
+                Entrar
+            </button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página -->
+    <section class="page-header">
+        <h1><i class="fas fa-ghost"></i> LENDAS URBANAS</h1>
+        <p>As histórias que assombram as cidades brasileiras</p>
+    </section>
+
+    <section class="legend-grid">
+        <!-- Mula sem Cabeça -->
+        <div class="legend-item">
+            <div class="legend-poster" style="background-image: url('../assets/img/mulasemcabeca.png')">
+                <div class="lenda-actions">
+                    <a href="pagina_streaming.html?lenda=mula" class="btn-play">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+            </div>
+            <div class="legend-info">
+                <h3>Mula sem Cabeça</h3>
+                <p>A maldição que assombra as noites de lua cheia</p>
+                <div class="meta-info">
+                    <span>45 min</span>
+                    <span>Classificação: +16</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lobisomem -->
+        <div class="legend-item">
+            <div class="legend-poster" style="background-image: url('../assets/img/lobisomen.png')">
+                <div class="lenda-actions">
+                    <a href="pagina_streaming.html?lenda=lobisomem" class="btn-play">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+            </div>
+            <div class="legend-info">
+                <h3>Lobisomem</h3>
+                <p>A transformação sob o luar</p>
+                <div class="meta-info">
+                    <span>52 min</span>
+                    <span>Classificação: +16</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Iara -->
+        <div class="legend-item">
+            <div class="legend-poster" style="background-image: url('../assets/img/iara.png')">
+                <div class="lenda-actions">
+                    <a href="pagina_streaming.html?lenda=iara" class="btn-play">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+            </div>
+            <div class="legend-info">
+                <h3>Iara</h3>
+                <p>A sedutora dos rios urbanos</p>
+                <div class="meta-info">
+                    <span>38 min</span>
+                    <span>Classificação: +12</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuca -->
+        <div class="legend-item">
+            <div class="legend-poster" style="background-image: url('../assets/img/cuca.png')">
+                <div class="lenda-actions">
+                    <a href="pagina_streaming.html?lenda=cuca" class="btn-play">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+            </div>
+            <div class="legend-info">
+                <h3>Cuca</h3>
+                <p>O pesadelo das crianças desobedientes</p>
+                <div class="meta-info">
+                    <span>42 min</span>
+                    <span>Classificação: +12</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boitatá -->
+        <div class="legend-item">
+            <div class="legend-poster" style="background-image: url('../assets/img/boitata.png')">
+                <div class="lenda-actions">
+                    <a href="pagina_streaming.html?lenda=boitata" class="btn-play">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+            </div>
+            <div class="legend-info">
+                <h3>Boitatá</h3>
+                <p>A serpente de fogo das metrópoles</p>
+                <div class="meta-info">
+                    <span>49 min</span>
+                    <span>Classificação: Livre</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="tupi">TUPI</span>
+                    <div class="flix">
+                        <i class="fas fa-play"></i>
+                        <span>FLIX</span>
+                    </div>
+                </div>
+                <p>© 2024 TupiFlix - Todos os direitos reservados</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="#">Lendas</a></li>
+                        <li><a href="#">Documentários</a></li>
+                        <li><a href="#">Sobre</a></li>
+                    </ul>
+                </div>
+                
+                <div class="links-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
