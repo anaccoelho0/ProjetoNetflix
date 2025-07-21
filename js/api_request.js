@@ -13,7 +13,7 @@ export async function fetchYouTubeVideos(query = '', options = {}) {
         throw new Error('API Key do YouTube não definida.');
     }
     const {
-        maxResults = 10,
+        maxResults = 5,
         order = 'viewCount',
         videoDuration = 'medium',
         regionCode = 'BR',
