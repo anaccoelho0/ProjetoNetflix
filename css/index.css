@@ -382,7 +382,7 @@ h1, h2, h3, h4 {
 .see-all:hover {
     color: var(--amarelo);
 }
-
+/* 
 .docs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -455,14 +455,9 @@ h1, h2, h3, h4 {
     color: var(--cinza-escuro);
     font-size: 0.9rem;
     margin-bottom: 1rem;
-}
+}*/
 
-.doc-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--amarelo);
-}
+
 
 /* FOOTER */
 .footer {

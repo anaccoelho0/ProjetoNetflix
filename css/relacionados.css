@@ -1,0 +1,167 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: var(--gradiente-header);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 1rem 3rem;
+    box-shadow: var(--sombra);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--branco);
+}
+
+.tupi {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.flix {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flix i {
+    color: var(--amarelo);
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+.flix span {
+    font-weight: 700;
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--amarelo);
+    font-size: 1rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--amarelo);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--amarelo);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--amarelo);
+    border: 2px solid var(--amarelo);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: var(--amarelo);
+    color: var(--preto);
+}
+
+.doc-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.doc-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--amarelo);
+} 
+
+.related-videos-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: black;
+        }
+        .doc-card {
+            background: darkgray;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .doc-card:hover {
+            transform: translateY(-10px);
+        }
+        .doc-thumbnail img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .doc-info {
+            padding: 1.5rem;
+            background: black;
+            color: white;
+        }

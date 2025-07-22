@@ -82,7 +82,7 @@
         Destaques
       </h2>
       <div class="carousel-container">
-        <div class="carousel-item">
+        <div class="carousel-item" data-categoria="Lendas Urbanas">
           <a href="./html/lendasurbanas.html" class="lenda-link">
             <div
               class="lenda-card"
@@ -96,55 +96,63 @@
           </a>
         </div>
         <!-- Novo item - Curupira -->
-        <div class="carousel-item">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/tupa.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>DEUSES</h3>
-              <div class="lenda-actions"></div>
+        <div class="carousel-item" data-categoria="mitologia brasileira">
+          <a href="" class="lenda-link">
+            <div
+              class="lenda-card"
+              style="background-image: url('assets/img/tupa.png')"
+            >
+              <div class="lenda-overlay">
+                <h3>DEUSES</h3>
+                <div class="lenda-actions"></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Novo item - Iara -->
-        <div class="carousel-item" data-categoria="mitologia Saci Pererê">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/saci.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>SACI-PERERÊ</h3>
-              <div class="lenda-actions"></div>
+        <div class="carousel-item" data-categoria="Mitologia Saci-Pererê">
+          <a href="" class="lenda-link">
+            <div
+              class="lenda-card"
+              style="background-image: url('assets/img/saci.png')"
+            >
+              <div class="lenda-overlay">
+                <h3>SACI-PERERÊ</h3>
+                <div class="lenda-actions"></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Novo item - Boitatá -->
         <div class="carousel-item" data-categoria="mitologia Curupira">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/curupira.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>CURUPIRA</h3>
-              <div class="lenda-actions"></div>
+          <a href="" class="lenda-link">
+            <div
+              class="lenda-card"
+              style="background-image: url('assets/img/curupira.png')"
+            >
+              <div class="lenda-overlay">
+                <h3>CURUPIRA</h3>
+                <div class="lenda-actions"></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Novo item - Boto Cor-de-Rosa -->
-        <div class="carousel-item" data-categoria="mitologia iara ">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/iara.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>IARA</h3>
-              <div class="lenda-actions"></div>
+        <div class="carousel-item" data-categoria="mitologia Iara">
+          <a href="" class="lenda-link">
+            <div
+              class="lenda-card"
+              style="background-image: url('assets/img/iara.png')"
+            >
+              <div class="lenda-overlay">
+                <h3>IARA</h3>
+                <div class="lenda-actions"></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -207,14 +215,12 @@
       document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".carousel-item").forEach(function (item) {
           const categoria = item.getAttribute("data-categoria");
-          const btn = item.querySelector(".btn-relacionados");
+          const btn = item.querySelector(".lenda-link");
           if (btn && categoria) {
-            btn.addEventListener("click", function (e) {
-              e.stopPropagation();
-              window.location.href = `html/relacionados.html?categoria=${encodeURIComponent(
+              btn.href = `html/relacionados.html?categoria=${encodeURIComponent(
                 categoria
               )}`;
-            });
+            
           }
         });
       });

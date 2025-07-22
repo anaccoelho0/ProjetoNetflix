@@ -1,0 +1,17 @@
+:root {
+    --vermelho: #E74C3C;
+    --amarelo: #F1C40F;
+    --preto: #1A1A1A;
+    --branco: #FFFFFF;
+    --cinza: #F5F5F5;
+    --cinza-escuro: #333333;
+    
+    --gradiente-header: linear-gradient(135deg, var(--vermelho) 0%, var(--preto) 100%);
+    --sombra: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

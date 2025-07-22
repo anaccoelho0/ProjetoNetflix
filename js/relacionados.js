@@ -28,9 +28,7 @@ import { fetchYouTubeVideos, getCategory, getCategoryIcon } from './api_request.
                                 <div class="doc-play">
                                     <i class="fas fa-play"></i>
                                 </div>
-                                <div class="doc-category" title="Categoria: ${category}">
-                                    ${categoryIconSvg}
-                                </div>
+                                
                             </div>
                             <div class="doc-info">
                                 <h3>${title}</h3>
