@@ -1,223 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TupiFlix | Lendas Brasileiras</title>
     <link rel="stylesheet" href="./css/index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
 
-  <body>
+<body>
     <!-- Header Animado -->
     <header class="header">
-      <div class="logo-container">
-        <div class="logo">
-          <span class="tupi">TUPI</span>
-          <div class="flix">
-            <i class="fas fa-play"></i>
-            <span>FLIX</span>
-          </div>
+        <div class="logo-container">
+            <div class="logo">
+                <span class="tupi">TUPI</span>
+                <div class="flix">
+                    <i class="fas fa-play"></i>
+                    <span>FLIX</span>
+                </div>
+            </div>
+            <span class="slogan">Lendas que ganham vida</span>
         </div>
-        <span class="slogan">Lendas que ganham vida</span>
-      </div>
 
-      <nav class="nav">
-        <button class="btn-menu">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="#carousel">Lendas</a></li>
-          <li><a href="#docs">Documentários</a></li>
-          <li><a href="#about">Sobre</a></li>
-        </ul>
-        <button class="btn-login">
-          <i class="fas fa-user"></i>
-          Entrar
-        </button>
-      </nav>
+        <nav class="nav">
+            <button class="btn-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="../html/sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section Interativa -->
     <section class="hero">
-      <div class="hero-video">
-        <video autoplay muted loop>
-          <source src="assets/video/saci.video.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="assets/video/saci.video.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
 
-      <div class="hero-content">
-        <div class="hero-tags">
-          <span class="tag">NOVO</span>
-          <span class="tag">EXCLUSIVO</span>
+        <div class="hero-content">
+            <div class="hero-tags">
+                <span class="tag">NOVO</span>
+                <span class="tag">EXCLUSIVO</span>
+            </div>
+            <h1>SACI-PERERÊ</h1>
+            <p class="hero-desc">
+                A lenda do travesso de uma perna só que conquistou o Brasil
+            </p>
+            <div class="hero-buttons">
+                <a href="./html/pagina_streaming.html" class="btn-play">
+                    <i class="fas fa-play"></i> Assistir
+                </a>
+            </div>
         </div>
-        <h1>SACI-PERERÊ</h1>
-        <p class="hero-desc">
-          A lenda do travesso de uma perna só que conquistou o Brasil
-        </p>
-        <div class="hero-buttons">
-          <a href="./html/pagina_streaming.html" class="btn-play">
-            <i class="fas fa-play"></i> Assistir
-          </a>
-          <button class="btn-info">
-            <i class="fas fa-info-circle"></i> Mais informações
-          </button>
-        </div>
-      </div>
     </section>
 
     <!-- Carrossel de Lendas -->
     <section class="carousel">
-      <h2 class="section-title">
-        <span class="icon"><i class="fas fa-fire"></i></span>
-        Destaques
-      </h2>
-      <div class="carousel-container">
-        <div class="carousel-item">
-          <a href="./html/lendasurbanas.html" class="lenda-link">
-            <div
-              class="lenda-card"
-              style="background-image: url('assets/img/lendaurbana.png')"
-            >
-              <div class="lenda-overlay">
-                <h3>LENDAS URBANAS</h3>
-                <div class="lenda-actions"></div>
-              </div>
+        <h2 class="section-title">
+            <span class="icon"><i class="fas fa-fire"></i></span>
+            Destaques
+        </h2>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <a href="./html/lendasurbanas.html" class="lenda-link">
+                    <div class="lenda-card" style="background-image: url('assets/img/lendaurbana.png')">
+                        <div class="lenda-overlay">
+                            <h3>LENDAS URBANAS</h3>
+                            <div class="lenda-actions"></div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a>
-        </div>
-        <!-- Novo item - Curupira -->
-        <div class="carousel-item">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/tupa.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>DEUSES</h3>
-              <div class="lenda-actions"></div>
+            <!-- Novo item - Curupira -->
+            <div class="carousel-item">
+                <div class="lenda-card" style="background-image: url('assets/img/tupa.png')">
+                    <div class="lenda-overlay">
+                        <h3>DEUSES</h3>
+                        <div class="lenda-actions"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Novo item - Iara -->
-        <div class="carousel-item" data-categoria="mitologia Saci Pererê">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/saci.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>SACI-PERERÊ</h3>
-              <div class="lenda-actions"></div>
+            <!-- Novo item - Iara -->
+            <div class="carousel-item" data-categoria="mitologia Saci Pererê">
+                <div class="lenda-card" style="background-image: url('assets/img/saci.png')">
+                    <div class="lenda-overlay">
+                        <h3>SACI-PERERÊ</h3>
+                        <div class="lenda-actions"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Novo item - Boitatá -->
-        <div class="carousel-item" data-categoria="mitologia Curupira">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/curupira.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>CURUPIRA</h3>
-              <div class="lenda-actions"></div>
+            <!-- Novo item - Boitatá -->
+            <div class="carousel-item" data-categoria="mitologia Curupira">
+                <div class="lenda-card" style="background-image: url('assets/img/curupira.png')">
+                    <div class="lenda-overlay">
+                        <h3>CURUPIRA</h3>
+                        <div class="lenda-actions"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Novo item - Boto Cor-de-Rosa -->
-        <div class="carousel-item" data-categoria="mitologia iara ">
-          <div
-            class="lenda-card"
-            style="background-image: url('assets/img/iara.png')"
-          >
-            <div class="lenda-overlay">
-              <h3>IARA</h3>
-              <div class="lenda-actions"></div>
+            <!-- Novo item - Boto Cor-de-Rosa -->
+            <div class="carousel-item" data-categoria="mitologia iara ">
+                <div class="lenda-card" style="background-image: url('assets/img/iara.png')">
+                    <div class="lenda-overlay">
+                        <h3>IARA</h3>
+                        <div class="lenda-actions"></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Seção de Documentários -->
     <section class="docs">
-      <div class="docs-header">
-        <h2 class="section-title">
-          <span class="icon"><i class="fas fa-book-open"></i></span>
-          Documentários
-        </h2>
-        <a href="#" class="see-all"
-          >Ver todos <i class="fas fa-chevron-right"></i
-        ></a>
-      </div>
-      <div class="docs-grid"></div>
+        <div class="docs-header">
+            <h2 class="section-title">
+                <span class="icon"><i class="fas fa-book-open"></i></span>
+                Documentários
+            </h2>
+            <a href="#" class="see-all">Ver todos <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="docs-grid"></div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <div class="logo">
-            <span class="tupi">TUPI</span>
-            <div class="flix">
-              <i class="fas fa-play"></i>
-              <span>FLIX</span>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="tupi">TUPI</span>
+                    <div class="flix">
+                        <i class="fas fa-play"></i>
+                        <span>FLIX</span>
+                    </div>
+                </div>
+                <p>© 2024 TupiFlix - Todos os direitos reservados</p>
             </div>
-          </div>
-          <p>© 2024 TupiFlix - Todos os direitos reservados</p>
-        </div>
 
-        <div class="footer-links">
-          <div class="links-column">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="#">Início</a></li>
-              <li><a href="#">Lendas</a></li>
-              <li><a href="#">Documentários</a></li>
-              <li><a href="#">Sobre</a></li>
-            </ul>
-          </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Lendas</a></li>
+                        <li><a href="#">Documentários</a></li>
+                        <li><a href="#">Sobre</a></li>
+                    </ul>
+                </div>
 
-          <div class="links-column">
-            <h4>Redes Sociais</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-tiktok"></i></a>
+                <div class="links-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </footer>
 
     <!-- JAVASCRIPT REQUEST API YOUTUBE - não utilizar até mesclagem da branch api_yt -->
-    <script src="./js/index.js" type="module"></script>
+    <!-- <script src="./js/index.js" type="module"></script> -->
     <script>
-      // Torna os botões do carrossel abrirem relacionados.html com a categoria correta
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".carousel-item").forEach(function (item) {
-          const categoria = item.getAttribute("data-categoria");
-          const btn = item.querySelector(".btn-relacionados");
-          if (btn && categoria) {
-            btn.addEventListener("click", function (e) {
-              e.stopPropagation();
-              window.location.href = `html/relacionados.html?categoria=${encodeURIComponent(
-                categoria
-              )}`;
+        // Torna os botões do carrossel abrirem relacionados.html com a categoria correta
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".carousel-item").forEach(function (item) {
+                const categoria = item.getAttribute("data-categoria");
+                const btn = item.querySelector(".btn-relacionados");
+                if (btn && categoria) {
+                    btn.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        window.location.href = `html/relacionados.html?categoria=${encodeURIComponent(
+                            categoria
+                        )}`;
+                    });
+                }
             });
-          }
         });
-      });
     </script>
-  </body>
+</body>
+
 </html>

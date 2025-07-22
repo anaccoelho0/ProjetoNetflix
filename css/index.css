@@ -54,6 +54,11 @@ h1, h2, h3, h4 {
     gap: 1rem;
 }
 
+.logo-link{
+    text-decoration: none;
+    color: var(--branco);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -776,4 +781,386 @@ progress::-webkit-progress-value {
     }
 }
 
-/* CSS LENDAS */
+
+/* Estilos específicos para a página Lendas Urbanas */
+
+/* Estrutura principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--preto);
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Header da página */
+.page-header {
+    padding: 8rem 3rem 4rem;
+    background: linear-gradient(to right, #1A1A1A, #E50914);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Grid de lendas */
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    background-color: var(--preto);
+}
+
+/* Cartão de cada lenda */
+.legend-item {
+    background: var(--cinza-escuro);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.legend-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Poster da lenda */
+.legend-poster {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Informações da lenda */
+.legend-info {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    color: var(--branco);
+}
+
+.legend-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.legend-info p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    min-height: 40px;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Botão Assistir */
+.lenda-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.legend-item:hover .lenda-actions {
+    opacity: 1;
+}
+
+.btn-play {
+    background: var(--vermelho);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-play:hover {
+    background: #f40612;
+    transform: scale(1.05);
+}
+
+/* Remover linha azul da logo */
+.logo .tupi {
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+/* Footer fixo na parte inferior */
+.footer {
+    background: #141414;
+    padding: 3rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo p {
+    margin-top: 1rem;
+    color: #757575;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.links-column h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.links-column ul {
+    list-style: none;
+}
+
+.links-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.links-column ul li a {
+    color: #757575;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-column ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    color: #757575;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Estilos específicos para a página Sobre */
+
+/* Estrutura principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--preto);
+}
+
+.sobre-container {
+    flex: 1;
+    background-color: var(--preto);
+}
+
+/* Header da página */
+.sobre-header {
+    padding: 6rem 3rem 3rem;
+    background: linear-gradient(to right, #1A1A1A, #E50914);
+    color: white;
+    text-align: center;
+}
+
+.sobre-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.sobre-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Conteúdo principal */
+.sobre-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.sobre-card {
+    background: var(--cinza-escuro);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.sobre-card h2 {
+    color: var(--vermelho);
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre-card h2 i {
+    font-size: 1.5rem;
+}
+
+.sobre-card p {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.sobre-card ul {
+    padding-left: 20px;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* Seção dos criadores */
+.criadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.criador {
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.criador-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--vermelho);
+}
+
+.criador h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.criador p {
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+.equipe-text {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+/* Seção do futuro */
+.futuro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.futuro-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(229,9,20,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.futuro-item:hover {
+    transform: translateY(-5px);
+    background: rgba(229,9,20,0.2);
+}
+
+.futuro-item i {
+    font-size: 2.5rem;
+    color: var(--vermelho);
+    margin-bottom: 1rem;
+}
+
+.futuro-item h4 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.futuro-item p {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-header {
+        padding: 4rem 1.5rem 2rem;
+    }
+    
+    .sobre-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .sobre-content {
+        padding: 1rem;
+    }
+    
+    .sobre-card {
+        padding: 1.5rem;
+    }
+    
+    .criadores-grid {
+        grid-template-columns: 1fr;
+    }
+}
