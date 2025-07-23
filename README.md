@@ -14,6 +14,3 @@
 - Títulos: font-family: 'Playfair Display', serif;
     font-weight: 700;
 - Corpo: font-family: 'Raleway', sans-serif;
-- Cores
-    - Primária: #d4af37;
-    - Fundo:  #1a1a1a;

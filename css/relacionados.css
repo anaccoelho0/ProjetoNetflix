@@ -135,33 +135,115 @@
     gap: 0.5rem;
     color: var(--amarelo);
 } 
+.page-header {
+    padding: 8rem 3rem 4rem;
+    background: linear-gradient(to right, #1A1A1A, #E50914);
+    color: white;
+    text-align: center;
+    position: relative;
+}
 
-.related-videos-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            background-color: black;
-        }
-        .doc-card {
-            background: darkgray;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .doc-card:hover {
-            transform: translateY(-10px);
-        }
-        .doc-thumbnail img {
-            height: 400px;
-            width: 100%;
-            object-fit: cover;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .doc-info {
-            padding: 1.5rem;
-            background: black;
-            color: white;
-        }
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Grid de lendas */
+#legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    background-color: var(--preto);
+}
+
+/* Cartão de cada lenda */
+.legend-item {
+    background: var(--cinza-escuro);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.legend-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Poster da lenda */
+.legend-poster {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Informações da lenda */
+.legend-info {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    color: var(--branco);
+}
+
+.legend-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.legend-info p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    min-height: 40px;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Botão Assistir */
+.lenda-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.legend-item:hover .lenda-actions {
+    opacity: 1;
+}
+
+.btn-play {
+    background: var(--vermelho);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-play:hover {
+    background: #f40612;
+    transform: scale(1.05);
+}
